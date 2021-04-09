@@ -1,0 +1,611 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Dancing Script', cursive;
+    font-family: 'Akaya Kanadaka', cursive; 
+    font-family: 'Acme', sans-serif;*/
+}
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.intro.fade {
+    opacity: 0;
+    transition: visibility 0s, opacity 0.8s linear;
+}
+
+.body-content {
+    width: 100%;
+    height: 100vh;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
+}
+  
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+  
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+  
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+  
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+/* .main-class {
+    background: -webkit-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+    background: -o-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+    background: -moz-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+    background: linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+} */
+
+header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header h4 {
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    line-height: 45px;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.logo-tag {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    line-height: 45px;
+    visibility: hidden;
+}
+
+.logo-next {
+    font-weight: 200;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.logo-next.active {
+    visibility: visible;
+}
+  
+.logo-next .letter {
+    line-height: 1em;
+}
+
+.enter-btn {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.enter-btn:hover {
+    cursor: pointer;
+}
+
+.enter-btn.active {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 50%;
+    z-index: 5;
+}
+
+.enter-btn-text {
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 1.4em;
+    border-bottom: 1px solid white;
+    padding: 2%;
+}
+
+.story-one {
+    text-align: center;
+    height: 100vh;
+    background: url(../assets/bgNew.jpg) fixed;
+}
+
+.story-one p:nth-child(1) {
+    font-family: 'Akaya Kanadaka', cursive;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0b3d56;
+    text-align: center;
+    line-height: 45px;
+    font-size: 3em;
+    width: 100%;
+}
+
+.story-one p:nth-child(2) {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0b3d56;
+    text-align: center;
+    line-height: 45px;
+    width: 100%;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    font-weight: 700;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.story-two {
+    background: #fed9c9;
+    height: 100vh;
+}
+
+.heading-one-span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6d7171;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.5em;
+    width: 100%;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.text-one {
+    display: inline;
+    position: absolute;
+    bottom: -33em;
+    left: 1.2em;
+}
+
+.text-one span {
+    font-weight: bold;
+}
+
+.text-one-poem {
+    position: absolute;
+    margin: 34em 0em 0em 1em;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-one-poem p {
+    font-family: 'Dancing Script', cursive;
+}
+
+#sheImg {
+    border: 7px solid #ffffff;
+    border-bottom: 20px solid #ffffff;
+    width: 20em;
+    position: absolute;
+    top: 33em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.story-three {
+  text-align: center;
+  height: 100vh;
+  background: url(../assets/bgNew.jpg) fixed;
+}
+
+#heImg {
+    border: 5px solid #ffffff;
+    border-bottom: 20px solid #ffffff;
+    width: 20em;
+    position: absolute;
+    top: 33em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.story-four {
+  background: #d0e7e5;
+  height: 100vh;
+}
+
+.heading-two-span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6d7171;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.5em;
+    width: 100%;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.text-two {
+    display: inline;
+    position: absolute;
+    bottom: -114em;
+    left: 3.4em;
+}
+
+.text-two span {
+    font-weight: bold;
+}
+
+.text-two-poem {
+    position: absolute;
+    margin: 34em 0em 0em 1em;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-two-poem p {
+    font-family: 'Dancing Script', cursive;
+}
+
+#d1Img {
+    width: 6em;
+}
+
+.image-met-one {
+    margin: 24px 1px 1px 0px;
+    position: absolute;
+}
+
+.image-met-one p {
+    font-size: 15px;
+}
+
+#firstImgP {
+    margin: 2px 4px -10px 0px;
+}
+
+#d2Img {
+    width: 8em;
+}
+
+.image-met-two {
+    position: absolute;
+    left: 3rem;
+    top: 29rem;
+}
+
+.image-met-two p {
+    font-size: 15px;
+}
+
+#twoImgP {
+    margin: -18px 4px 0px 0px;
+}
+
+#d3Img {
+    width: 6em;
+}
+
+.image-met-three {
+    position: absolute;
+    left: 6rem;
+    top: 48rem;
+}
+
+.image-met-three p {
+    font-size: 15px;
+}
+
+#threeImgP {
+    margin: -18px 4px 0px 0px;
+}
+
+#d4Img {
+    width: 8em;
+}
+
+.image-met-four {
+    position: absolute;
+    left: 19rem;
+    top: 37rem;
+}
+
+.image-met-four p {
+    font-size: 15px;
+}
+
+#fourImgP {
+    margin: -18px 4px 0px 0px;
+}
+
+#d5Img {
+    width: 8em;
+}
+
+.met-all-day {
+    position: absolute;
+    font-size: 13px;
+    left: 13rem;
+    top: 15rem;
+}
+
+#d6Img {
+    width: 5em;
+}
+
+.image-met-five {
+    position: absolute;
+    left: 25rem;
+    top: 53rem;
+}
+
+#w1Img {
+    width: 35rem;
+}
+
+.image-wed-one {
+    position: absolute;
+    left: 3rem;
+    top: 536rem;
+
+}
+
+.yes-btns {
+    text-align: center;
+    position: absolute;
+    top: 572rem;
+    left: 10rem;
+    z-index: 10;
+}
+
+.yesBtn {
+    border-radius: 3em;
+    border-color: #1abc9c;
+    color: #fff;
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: 0 0;
+    background-size: 100%;
+    border: 2px solid #1abc9c
+}
+
+.yesBtn:hover {
+    background-position: 100px;
+}
+
+.yesBtnOne {
+    width: 10rem;
+    height: 5rem;
+    margin: 0px 1px 20px 1px;
+    /* z-index: 10; */
+    /* position: absolute; */
+    /* display: none; */
+}
+
+.yesBtnOne span {
+    font-size: 18px;
+}
+
+.yesBtnTwo {
+    width: 20rem;
+    height: 5rem;
+    /* z-index: 10; */
+    /* position: absolute; */
+    /* display: none; */
+}
+
+.yesBtnTwo span {
+    font-size: 18px;
+}
+
+.quote-one p,
+.quote-two p,
+.quote-three p {
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+}
+
+.quote-one {
+    position: absolute;
+    top: 162rem;
+    left: 7rem;
+}
+
+.quote-two {
+    position: absolute;
+    top: 300rem;
+    left: 7rem;
+}
+
+.quote-three {
+    position: absolute;
+    top: 446rem;
+    left: 0rem;
+}
+
+.story-last {
+    background-color: #161616;
+}   
+
+.gradient-border {
+    position: absolute;
+    top: 520rem;
+    left: 5.5rem;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    display: block;
+    overflow: hidden;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    background-size: 200% auto;
+    animation: moveGradient 4s alternate infinite;
+    width: 30rem;
+    height: 17rem;
+    text-align: center;
+    font-size: 24px;
+    padding: 25px;
+}
+  
+/*Begin shimmer code*/
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
